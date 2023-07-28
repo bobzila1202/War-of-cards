@@ -33,12 +33,17 @@ while (flatDeck.length > 0) {
     shuffledDeck.push(flatDeck.at(randomIndex))
     flatDeck.splice(randomIndex,1)
     }
-console.log(shuffledDeck)
-console.log(flatDeck)
+// console.log(shuffledDeck)
+// console.log(flatDeck)
 //randomise the distribution 
-const player1 = []
-const player2 = []
-    
+let player1 = []
+let player2 = []
+player1 = [...shuffledDeck.slice(shuffledDeck.length / 2)]
+player2 = [...shuffledDeck.splice(0, shuffledDeck.length / 2)]
+
+   console.log(player1)
+   console.log(player2)
+   
 //Make two seperate and equal arrays, consisting of cards from the first array
 
 //Input a key and both you and the compupter will reveal first object within respective arrays
